@@ -1,12 +1,9 @@
 <?php
-
 namespace Database\Seeders;
-
 use Faker\Generator as Faker;
 use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
 class TypesTableSeeder extends Seeder
 {
     /**
@@ -19,7 +16,7 @@ class TypesTableSeeder extends Seeder
         for ($i = 0; $i < 100; $i++) {
             $type = new Type();
 
-            $type->title = $faker->word();
+            $type->type = $faker->word();
             $type->collabs = $faker->name();
             $type->save();
         }
